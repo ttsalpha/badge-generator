@@ -1,0 +1,106 @@
+.main {
+    width: 100vw;
+    padding: 50px 15vw 100px;
+    margin: 0 auto;
+}
+
+.guide {
+    padding-top: 30px;
+    max-width: 600px;
+}
+
+.logo {
+    margin: 0 auto;
+    top: 150px;
+    left: 65vw;
+    position: fixed;
+}
+
+.title {
+    width: fit-content;
+    background: linear-gradient(to right, var(--red) 0%, var(--teal) 100%);
+    opacity: 90%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.generator, .copy, .advanced {
+    cursor: pointer;
+}
+
+.input, .generator, .copy {
+    width: 100px;
+    height: 25px;
+    padding: 5px;
+    border: 1px solid var(--gray);
+    border-radius: 3px;
+    text-align: center;
+}
+
+.input {
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.input:focus {
+    outline: 1px solid var(--teal);
+    border: 1px solid var(--teal);
+}
+
+.generator {
+    background-color: var(--teal);
+    color: var(--white);
+}
+
+.advanced {
+    display: inline-block;
+    color: var(--gray);
+    height: 25px;
+    width: 110px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.result {
+    margin: 20px 0;
+    min-height: 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.preview {
+    font-size: 14px;
+    max-width: 60%;
+    overflow: scroll;
+    display: inline-block;
+    white-space: nowrap;
+    background-color: var(--light);
+    border: 5px solid var(--light);
+    border-radius: 5px;
+}
+
+.preview::-webkit-scrollbar {
+    display: none;
+}
+
+.copy {
+    width: 50px;
+    margin: 0 10px;
+    background-color: var(--white);
+}
+
+.variables {
+    font-size: 14px;
+    color: var(--gray);
+    -moz-tab-size: 4;
+    tab-size: 4;
+}
+
+.key {
+    width: 140px;
+    display: inline-block;
+    color: var(--teal);
+    margin: 7px 0;
+}

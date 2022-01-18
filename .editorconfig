@@ -1,0 +1,45 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+charset = utf-8
+# max_line_length = 80
+
+# Unix-style newlines with a newline ending
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# space indentation
+indent_style = space
+# indent_size = 2
+# tab_width = 2
+
+[*.{md,Rmd,rst}]
+max_line_length = off
+trim_trailing_whitespace = false
+indent_size = 4
+
+[Makefile]
+indent_style = tab
+indent_size = 4
+
+[*.{cjs,js,jsx,ats,ts,tsx}]
+indent_size = 4
+
+[*.json]
+indent_size = 4
+
+[{.babelrc,.eslintrc,.stylelintrc,jest.config}]
+indent_size = 4
+
+[*.{htm,html,ng,sht,shtm,shtml}]
+indent_size = 4
+
+[*.{yaml,yml}]
+indent_size = 2
+
+[*.{css,scss}]
+indent_size = 4
