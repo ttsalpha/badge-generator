@@ -24,15 +24,15 @@ export const checkColors = (color: string) => {
 }
 
 export const colorAlias = (color: string) => {
+    for (const variableKey in variables.colorAlias)
+        if (color === variableKey)
+            // @ts-ignore
+            return variables.colorAlias[variableKey]
+
     if (color.length === 3) {
         color = color.split('').map((hex) => {
             return hex + hex
         }).join('')
     }
-
-    for (const variableKey in variables.colorAlias)
-        if (color === variableKey)
-            // @ts-ignore
-            return variables.colorAlias[variableKey].toString()
     return color
 }
