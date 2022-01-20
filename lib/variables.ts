@@ -1,4 +1,4 @@
-const colorAlias = {
+const colorAlias: { [index: string]: string } = {
     red: 'FF3B30',
     orange: 'FF9500',
     yellow: 'FFCC00',
@@ -10,6 +10,8 @@ const colorAlias = {
     purple: 'AF52DE',
     pink: 'FF2D55',
     gray: '8E8E93',
+    light: '959DA5',
+    dark: '333333',
     black: '2A2A2A',
     white: 'FFFFFF'
 }

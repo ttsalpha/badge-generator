@@ -1,6 +1,4 @@
-import {variables} from "./variables";
-
-function hexToRgb(hex: string) {
+const hexToRgb = (hex: string) => {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
     if (result) {
         const r = parseInt(result[1], 16)
@@ -11,7 +9,13 @@ function hexToRgb(hex: string) {
     return
 }
 
-export const checkColors = (color: string) => {
+export const calcTextColors = (color: string) => {
+    if (color.length === 3) {
+        color = color.split('').map((hex) => {
+            return hex + hex
+        }).join('')
+    }
+
     const rgb = hexToRgb(color)
     const white = ['ffffff', '010101']
     const black = ['333333', 'cccccc']
@@ -21,18 +25,4 @@ export const checkColors = (color: string) => {
         return brightness <= brightnessThreshold ? white : black
     }
     return white
-}
-
-export const colorAlias = (color: string) => {
-    for (const variableKey in variables.colorAlias)
-        if (color === variableKey)
-            // @ts-ignore
-            return variables.colorAlias[variableKey]
-
-    if (color.length === 3) {
-        color = color.split('').map((hex) => {
-            return hex + hex
-        }).join('')
-    }
-    return color
 }

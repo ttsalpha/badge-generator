@@ -1,6 +1,6 @@
 import simpleIcons from 'simple-icons'
 import {variables} from './variables'
-import {checkColors, colorAlias} from './color'
+import {calcTextColors} from './color'
 
 const pixelWidth = require('string-pixel-width')
 
@@ -15,22 +15,20 @@ export interface Option {
 
 export default function Generator(
     {
-        label,
-        labelColor,
-        status,
-        color,
-        icon,
-        iconColor
+        label = '',
+        labelColor = 'dark',
+        status = '',
+        color = 'blue',
+        icon = '',
+        iconColor = 'light'
     }: Option) {
 
-    if (label === undefined && status === undefined && icon === undefined)
+    if (!label && !status && !icon)
         return false
 
-    label == undefined ? label = '' : null
-    status == undefined ? status = '' : null
-    color = color == undefined ? '007ec6' : colorAlias(color)
-    labelColor = labelColor == undefined ? '333333' : colorAlias(labelColor)
-    iconColor = iconColor == undefined ? '959da5' : colorAlias(iconColor)
+    color = variables.colorAlias[color] || color
+    labelColor = variables.colorAlias[labelColor] || labelColor
+    iconColor = variables.colorAlias[iconColor] || iconColor
 
     let [_widthLabel, _widthStatus, _paddingLabel, _paddingStatus, _widthLabelBG, _widthStatusBG, _widthBadge]
         = [0, 0, 0, 0, 0, 0, 0]
@@ -45,7 +43,7 @@ export default function Generator(
         _widthBadge += _widthLabel + 10
 
         if (labelColor)
-            [_textLabel, _shadowLabel] = checkColors(labelColor)
+            [_textLabel, _shadowLabel] = calcTextColors(labelColor)
     }
 
     if (status) {
@@ -55,7 +53,7 @@ export default function Generator(
         _widthBadge += _widthStatus + 10
 
         if (color)
-            [_textStatus, _shadowStatus] = checkColors(color)
+            [_textStatus, _shadowStatus] = calcTextColors(color)
     }
 
     if (icon) {
@@ -84,7 +82,7 @@ export default function Generator(
         <defs>
             <linearGradient id="s" x2="0" y2="100%">
                 <stop offset="0" stop-color="#bbbbbb" stop-opacity=".1"/>
-                <stop offset="1" stop-color="#${labelColor}" stop-opacity=".1"/>
+                <stop offset="1" stop-opacity=".1"/>
             </linearGradient>
             <clipPath id="r">
                 <rect width="${_widthBadge}" height="20" rx="3" fill="#fff"/>
