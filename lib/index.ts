@@ -38,8 +38,8 @@ export default function Generator(
     if (label) {
         _widthLabel += Math.round(pixelWidth(label, {font: 'Verdana', size: 11}))
         _widthLabelBG += _widthLabel + 10
-        _paddingLabel += _widthLabel * 5 + 50
-        _paddingStatus += _widthLabelBG * 10
+        _paddingLabel += _widthLabel / 2 + 5
+        _paddingStatus += _widthLabelBG
         _widthBadge += _widthLabel + 10
 
         if (labelColor)
@@ -49,7 +49,7 @@ export default function Generator(
     if (status) {
         _widthStatus += Math.round(pixelWidth(status, {font: 'Verdana', size: 11}))
         _widthStatusBG += _widthStatus + 10
-        _paddingStatus += _widthStatus * 5 + 50
+        _paddingStatus += _widthStatus / 2 + 5
         _widthBadge += _widthStatus + 10
 
         if (color)
@@ -57,9 +57,9 @@ export default function Generator(
     }
 
     if (icon) {
-        _paddingLabel += 180
+        _paddingLabel += 18
         _widthLabelBG += label ? 18 : 23
-        _paddingStatus += label ? 180 : 230
+        _paddingStatus += label ? 18 : 23
         _widthBadge += label ? 18 : 23
 
         // create svg base64 encode
@@ -78,14 +78,14 @@ export default function Generator(
     }
 
     return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${_widthBadge}" height="20">
-        <title>${label || status}</title>
+        <title>${label + ' ' + status}</title>
         <defs>
             <linearGradient id="s" x2="0" y2="100%">
                 <stop offset="0" stop-color="#bbbbbb" stop-opacity=".1"/>
                 <stop offset="1" stop-opacity=".1"/>
             </linearGradient>
             <clipPath id="r">
-                <rect width="${_widthBadge}" height="20" rx="3" fill="#fff"/>
+                <rect width="${_widthBadge}" height="20" rx="3" fill="#ffffff"/>
             </clipPath>
         </defs>
         <g clip-path="url(#r)">
@@ -93,12 +93,12 @@ export default function Generator(
             <rect width="${_widthStatusBG}" height="20" fill="#${color}" x="${_widthLabelBG}"/>
             <rect width="${_widthBadge}" height="20" fill="url(#s)"/>
         </g>
-        <g fill="#ffffff" text-anchor="middle" font-family="Verdana,sans-serif" text-rendering="geometricPrecision" font-size="110">
-            ${icon || ''}
-            <text x="${_paddingLabel}" y="150" fill="#${_shadowLabel}" transform="scale(.1)" textLength="${_widthLabel * 10}" fill-opacity=".3" aria-hidden="true"> ${label} </text>
-            <text x="${_paddingLabel}" y="140" fill="#${_textLabel}" transform="scale(.1)" textLength="${_widthLabel * 10}"> ${label} </text>
-            <text x="${_paddingStatus}" y="150" fill="#${_shadowStatus}" transform="scale(.1)" textLength="${_widthStatus * 10}" fill-opacity=".3" aria-hidden="true"> ${status} </text>
-            <text x="${_paddingStatus}" y="140" fill="#${_textStatus}" transform="scale(.1)" textLength="${_widthStatus * 10}"> ${status} </text>
+        ${icon || ''}
+        <g fill="#ffffff" text-anchor="middle" font-family="Verdana,sans-serif" font-size="11">
+            <text x="${_paddingLabel}" y="15" fill="#${_shadowLabel}" textLength="${_widthLabel}" fill-opacity=".3">${label}</text>
+            <text x="${_paddingLabel}" y="14" fill="#${_textLabel}" textLength="${_widthLabel}">${label}</text>
+            <text x="${_paddingStatus}" y="15" fill="#${_shadowStatus}" textLength="${_widthStatus}" fill-opacity=".3">${status}</text>
+            <text x="${_paddingStatus}" y="14" fill="#${_textStatus}" textLength="${_widthStatus}">${status}</text>
         </g>
     </svg>`
 }
