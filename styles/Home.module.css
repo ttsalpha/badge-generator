@@ -10,10 +10,12 @@
 }
 
 .logo {
-    margin: 0 auto;
+    position: fixed;
     top: 150px;
     left: 65vw;
-    position: fixed;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
 }
 
 .title {
@@ -24,27 +26,84 @@
     -webkit-text-fill-color: transparent;
 }
 
+.example {
+    margin-right: 4px;
+}
+
+.field {
+    display: flex;
+}
+
 .generator, .copy, .advanced {
     cursor: pointer;
+}
+
+.generator:active, .copy:active, .advanced:active {
+    opacity: .5;
 }
 
 .input, .generator, .copy {
     width: 100px;
     height: 25px;
-    padding: 5px;
     border: 1px solid var(--gray);
-    border-radius: 3px;
+    border-radius: 4px;
     text-align: center;
 }
 
 .input {
     margin-right: 10px;
     margin-bottom: 5px;
+    font-size: 14px;
 }
 
 .input:focus {
     outline: 1px solid var(--teal);
     border: 1px solid var(--teal);
+}
+
+.colorStatus, .colorLabel, .colorIcon {
+    display: inline-block;
+}
+
+.colorStatus:hover .suggestColorStatus,
+.colorLabel:hover .suggestColorLabel,
+.colorIcon:hover .suggestColorIcon {
+    display: initial;
+}
+
+.datalist {
+    display: none;
+    position: absolute;
+    list-style: none;
+    text-align: center;
+    overflow: scroll;
+    width: 100px;
+    height: 200px;
+    padding: 0;
+    margin-top: 30px;
+    font-size: 14px;
+    background-color: var(--light);
+    border: 1px solid var(--light);
+    border-radius: 4px;
+    scrollbar-width: none;
+}
+
+.datalist::-webkit-scrollbar {
+    display: none;
+}
+
+.option {
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.option:nth-child(even) {
+    background-color: var(--white);
+}
+
+.option:active {
+    color: var(--teal);
 }
 
 .generator {
@@ -79,6 +138,7 @@
     background-color: var(--light);
     border: 5px solid var(--light);
     border-radius: 5px;
+    scrollbar-width: none;
 }
 
 .preview::-webkit-scrollbar {
@@ -92,6 +152,7 @@
 }
 
 .variables {
+    padding: 10px 0;
     font-size: 14px;
     color: var(--gray);
     -moz-tab-size: 4;
@@ -103,4 +164,40 @@
     display: inline-block;
     color: var(--teal);
     margin: 7px 0;
+}
+
+@media only screen and (max-width: 1200px) {
+    .main {
+        padding: 50px 10vw 100px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .logo {
+        top: 70px;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main {
+        padding: 40px 25px 50px;
+    }
+
+    .field {
+        display: initial;
+    }
+
+    .variables {
+        white-space: nowrap;
+        overflow: scroll;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        display: none;
+    }
 }

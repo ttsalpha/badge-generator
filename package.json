@@ -1,13 +1,13 @@
 {
     "name": "badge-generator",
-    "description": "Create a badge can be included in GitHub README or any other web page.",
+    "description": "Generate Markdown badges for Github README.",
     "homepage": "https://badge-generator.vercel.app",
     "author": {
         "name": "Son Tran",
         "email": "ttsalpha@icloud.com",
         "url": "https://github.com/ttsalpha"
     },
-    "version": "1.0.0",
+    "version": "1.1.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/ttsalpha/badge-generator.git"
