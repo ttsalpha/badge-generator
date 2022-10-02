@@ -2,6 +2,6 @@
 module.exports = {
     reactStrictMode: true,
     images: {
-        domains: ['badge-generator.vercel.app'],
+        domains: ['badge.ttsalpha.com']
     },
 }

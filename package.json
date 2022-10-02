@@ -1,13 +1,13 @@
 {
     "name": "badge-generator",
     "description": "Generate Markdown badges for Github README.",
-    "homepage": "https://badge-generator.vercel.app",
+    "homepage": "https://badge.ttsalpha.com",
     "author": {
         "name": "Son Tran",
         "email": "ttsalpha@icloud.com",
         "url": "https://github.com/ttsalpha"
     },
-    "version": "1.1.0",
+    "version": "1.0.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/ttsalpha/badge-generator.git"
@@ -17,6 +17,9 @@
         "ttsalpha",
         "sontran",
         "badge",
+        "generator",
+        "svg",
+        "markdown",
         "nextjs",
         "typescript"
     ],
@@ -30,7 +33,6 @@
         "next": "12.0.9",
         "react": "17.0.2",
         "react-dom": "17.0.2",
-        "react-ga": "^3.3.0",
         "simple-icons": "^6.8.0",
         "string-pixel-width": "^1.10.0"
     },

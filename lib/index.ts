@@ -64,8 +64,7 @@ export default function Generator(
 
         // create svg base64 encode
         try {
-            const path = icon === 'ttsalpha'
-                ? variables.path : simpleIcons.Get(String(icon)).path
+            const path = simpleIcons.Get(String(icon)).path
 
             const svgEmbed = `<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#${iconColor}" d="${path}"/>

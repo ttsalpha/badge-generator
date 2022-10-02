@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="public/logo.png" width="128" height="128" alt=""/>
+    <img src="public/logo.png" width="128" height="128" alt="logo"/>
     <h1>Badge Generator</h1>
     <p>Generate Markdown badges for Github README</p>
 </div>
@@ -25,7 +25,7 @@ const example = {
 }
 ```
 
-## Meta
+## Author
 
 Author: Son Tran
 
@@ -33,7 +33,7 @@ Info: [Personal Blog][ttsalpha-url] | [Github][github-url] | [Email][email-url]
 
 Repo: [@ttsalpha/badge-generator][repo-url]
 
-[ttsalpha-url]: https://ttsalpha.github.io
+[ttsalpha-url]: https://ttsalpha.com
 
 [github-url]: https://github.com/ttsalpha
 
@@ -41,14 +41,14 @@ Repo: [@ttsalpha/badge-generator][repo-url]
 
 [repo-url]: https://github.com/ttsalpha/badge-generator
 
-[home-url]: https://badge-generator.vercel.app
+[home-url]: https://badge.ttsalpha.com
 
-[e1]: https://badge-generator.vercel.app/api?icon=github&label=test&status=passing&color=green
+[e1]: https://badge.ttsalpha.com/api?icon=github&label=test&status=passing&color=green
 
-[e2]: https://badge-generator.vercel.app/api?icon=npm&label=package&status=v1.2.3&color=teal
+[e2]: https://badge.ttsalpha.com/api?icon=npm&label=package&status=v1.2.3&color=teal
 
-[e3]: https://badge-generator.vercel.app/api?label=license&status=GPL-3.0&color=pink
+[e3]: https://badge.ttsalpha.com/api?label=license&status=GPL-3.0&color=pink
 
-[e4]: https://badge-generator.vercel.app/api?icon=twitter&label=account&status=ttsalpha&color=1DA1F2&iconColor=1DA1F2
+[e4]: https://badge.ttsalpha.com/api?icon=twitter&label=account&status=ttsalpha&color=1DA1F2&iconColor=1DA1F2
 
-[e5]: https://badge-generator.vercel.app/api?icon=typescript&iconColor=white&label=TypeScript&labelColor=blue
+[e5]: https://badge.ttsalpha.com/api?icon=typescript&iconColor=white&label=TypeScript&labelColor=blue
