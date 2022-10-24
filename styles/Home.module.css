@@ -1,203 +1,81 @@
-.main {
-    width: 100vw;
-    padding: 50px 15vw 100px;
-    margin: 0 auto;
-}
-
-.guide {
-    padding-top: 30px;
-    max-width: 600px;
-}
-
-.logo {
-    position: fixed;
-    top: 150px;
-    left: 65vw;
-    width: 250px;
-    height: 250px;
-    margin: 0 auto;
-}
-
 .title {
     width: fit-content;
     background: linear-gradient(to right, var(--red) 0%, var(--teal) 100%);
     opacity: 90%;
+    font-size: 2.5rem;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .example {
-    margin-right: 4px;
+    margin-right: 0.25rem;
 }
 
-.field {
-    display: flex;
-}
-
-.generator, .copy, .advanced {
-    cursor: pointer;
-}
-
-.generator:active, .copy:active, .advanced:active {
-    opacity: .5;
-}
-
-.input, .generator, .copy {
+.input, .advanced {
     width: 100px;
-    height: 25px;
-    border: 1px solid var(--gray);
-    border-radius: 4px;
-    text-align: center;
+    height: 32px;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-.input {
-    margin-right: 10px;
-    margin-bottom: 5px;
-    font-size: 14px;
-}
-
-.input:focus {
-    outline: 1px solid var(--teal);
-    border: 1px solid var(--teal);
-}
-
-.colorStatus, .colorLabel, .colorIcon {
+.inputSuggestion {
     display: inline-block;
 }
 
-.colorStatus:hover .suggestColorStatus,
-.colorLabel:hover .suggestColorLabel,
-.colorIcon:hover .suggestColorIcon {
-    display: initial;
-}
-
-.datalist {
-    display: none;
+.suggestion {
     position: absolute;
-    list-style: none;
     text-align: center;
     overflow: scroll;
     width: 100px;
     height: 200px;
-    padding: 0;
-    margin-top: 30px;
-    font-size: 14px;
-    background-color: var(--light);
+    margin-top: 32px;
     border: 1px solid var(--light);
-    border-radius: 4px;
+    backdrop-filter: blur(1rem);
+    border-radius: 0.5rem;
     scrollbar-width: none;
 }
 
-.datalist::-webkit-scrollbar {
+.suggestion::-webkit-scrollbar {
     display: none;
 }
 
 .option {
-    padding: 5px;
-    border-radius: 3px;
+    padding: 0.5rem;
     cursor: pointer;
 }
 
 .option:nth-child(even) {
-    background-color: var(--white);
+    border-bottom: var(--light) 1px solid;
+    border-top: var(--light) 1px solid;
 }
 
-.option:active {
-    color: var(--teal);
-}
-
-.generator {
-    background-color: var(--teal);
-    color: var(--white);
-}
-
-.advanced {
-    display: inline-block;
-    color: var(--gray);
-    height: 25px;
-    width: 110px;
-    margin-bottom: 5px;
-    font-size: 12px;
-    cursor: pointer;
+.option:hover {
+    color: var(--blue);
 }
 
 .result {
-    margin: 20px 0;
-    min-height: 20px;
-    font-size: 16px;
+    margin: 1rem 0;
     display: flex;
     align-items: center;
 }
 
-.preview {
-    font-size: 14px;
-    max-width: 60%;
-    overflow: scroll;
+.query {
+    margin-bottom: 1rem;
+}
+
+.queryHeader {
     display: inline-block;
-    white-space: nowrap;
-    background-color: var(--light);
-    border: 5px solid var(--light);
-    border-radius: 5px;
-    scrollbar-width: none;
+    width: 10rem;
 }
 
-.preview::-webkit-scrollbar {
-    display: none;
+.queryLabel {
+    color: var(--blue);
 }
 
-.copy {
-    width: 50px;
-    margin: 0 10px;
-    background-color: var(--white);
-}
-
-.variables {
-    padding: 10px 0;
-    font-size: 14px;
-    color: var(--gray);
-    -moz-tab-size: 4;
-    tab-size: 4;
-}
-
-.key {
-    width: 140px;
-    display: inline-block;
+.queryValue {
     color: var(--teal);
-    margin: 7px 0;
 }
 
-@media only screen and (max-width: 1200px) {
-    .main {
-        padding: 50px 10vw 100px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .logo {
-        top: 70px;
-        position: absolute;
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .main {
-        padding: 40px 25px 50px;
-    }
-
-    .field {
-        display: initial;
-    }
-
-    .variables {
-        white-space: nowrap;
-        overflow: scroll;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .logo {
-        display: none;
-    }
+.queryDescription {
+    color: var(--gray);
 }

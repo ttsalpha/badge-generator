@@ -1,7 +1,9 @@
 <div align="center">
-    <img src="public/logo.png" width="128" height="128" alt="logo"/>
+    <a href="https://badge.ttsalpha.com">
+        <img src="public/logo.png" width="128" height="128" alt="logo"/>
+    </a>
     <h1>Badge Generator</h1>
-    <p>Generate Markdown badges for Github README</p>
+    <p>Generate Markdown badges for GitHub README</p>
 </div>
 
 ## Example
@@ -16,7 +18,7 @@
 
 ```javascript
 const example = {
-    label: 'npm',         // [Text]
+    label: 'package',     // [Text]
     status: 'v1.2.3',     // [Text]
     color: 'teal',        // [Color RGB] or [Color Name] (default: 'blue')
     icon: 'npm',          // [Text] Use icon name in SimpleIcons.org
@@ -29,7 +31,7 @@ const example = {
 
 Author: Son Tran
 
-Info: [Personal Blog][ttsalpha-url] | [Github][github-url] | [Email][email-url]
+Info: [Personal Blog][ttsalpha-url] | [GitHub][github-url] | [Email][email-url]
 
 Repo: [@ttsalpha/badge-generator][repo-url]
 

@@ -4,7 +4,7 @@ body {
     margin: 0;
     width: 100vw;
     height: 100vh;
-    font-size: 16px;
+    font-size: 14px;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     color: var(--dark);
@@ -22,7 +22,7 @@ body {
     --pink: #FF2D55;
     --gray: #8E8E93;
     --black: #2A2A2A;
-    --white: #FFFFFF
+    --white: #FFFFFF;
 }
 
 * {
@@ -30,6 +30,6 @@ body {
 }
 
 a {
-    color: #06c;
+    color: var(--blue);
     text-decoration: none;
 }

@@ -1,4 +1,4 @@
-import simpleIcons from 'simple-icons'
+const simpleIcons = require('simple-icons')
 import {variables} from './variables'
 import {calcTextColors} from './color'
 
