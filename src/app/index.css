@@ -1,0 +1,193 @@
+/* ============= General Styles ============= */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    min-height: 100dvh;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+/* ============= Header ============= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--smoke);
+}
+
+.logo-image img {
+    height: 3rem;
+    width: auto;
+}
+
+.title {
+    font-size: 2rem;
+    margin: 0;
+    background: linear-gradient(to right bottom, var(--teal) 40%, var(--red) 140%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+/* ============= Box ============= */
+.box {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1.25rem 2rem;
+    /* background-color: var(--light); */
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(0.5rem);
+    border-radius: 1rem;
+}
+
+.box-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+/* ============= Example Section ============= */
+.example {
+    margin: 1rem 0;
+}
+
+.example-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* ============= Generator Section ============= */
+.generator-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.generator-content {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.generator-result {
+    margin-top: 3rem;
+}
+
+.generator-result .result-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.generator-result .result-item-label {
+    width: 7rem;
+}
+
+.generator-result .markdown-content,
+.generator-result .html-content {
+    padding: 0.25rem 0.5rem;
+    background-color: var(--white);
+    border-radius: 0.35rem;
+    border: 1px solid var(--smoke);
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+.generator-result .copy-button {
+    cursor: pointer;
+    aspect-ratio: 1;
+}
+
+/* ============= Type Section ============= */
+.type {
+    font-size: 0.9rem;
+}
+
+.type .type-item span:first-child {
+    margin-right: 0.5rem;
+}
+
+.type .type-item span:last-child {
+    color: var(--gray);
+}
+
+/* ============= Author Section ============= */
+.author {
+    font-size: 0.9rem;
+}
+
+.author .links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ============= Licence Section ============= */
+.licence {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: var(--gray);
+    border-top: 1px solid var(--smoke);
+    width: 100%;
+}
+
+.licence p {
+    margin: 0.5rem 0;
+}
+
+
+/* ======== Mobile, Tablet and Smaller Desktop ======== */
+@media (max-width: 992px) {
+    .logo-image img {
+        height: 2.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.8rem;
+    }
+
+    .box {
+        padding: 1rem;
+    }
+
+    .box-title {
+        font-size: 1.1rem;
+    }
+
+    .generator-result .result-item {
+        font-size: 0.85rem;
+    }
+
+    .generator-result .result-item-label {
+        width: 9rem;
+    }
+
+    .generator-result .markdown-content,
+    .generator-result .html-content {
+        font-size: 0.8rem;
+    }
+}

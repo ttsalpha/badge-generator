@@ -14,19 +14,6 @@
 [![e4][e4]][home-url]
 [![e5][e5]][home-url]
 
-## Query
-
-```javascript
-const example = {
-    label: 'package',     // [Text]
-    status: 'v1.2.3',     // [Text]
-    color: 'teal',        // [Color RGB] or [Color Name] (default: 'blue')
-    icon: 'npm',          // [Text] Use icon name in SimpleIcons.org
-    labelColor: '444',    // [Color RGB] or [Color Name] (default: '333333')
-    iconColor: 'e4e4e4'   // [Color RGB] or [Color Name] (default: '959da5')
-}
-```
-
 ## Author
 
 Author: Son Tran
@@ -51,6 +38,6 @@ Repo: [@ttsalpha/badge-generator][repo-url]
 
 [e3]: https://badge.ttsalpha.com/api?label=license&status=GPL-3.0&color=pink
 
-[e4]: https://badge.ttsalpha.com/api?icon=twitter&label=account&status=ttsalpha&color=1DA1F2&iconColor=1DA1F2
+[e4]: https://badge.ttsalpha.com/api?icon=x&label=account&status=ttsalpha&color=1DA1F2
 
 [e5]: https://badge.ttsalpha.com/api?icon=typescript&iconColor=white&label=TypeScript&labelColor=blue

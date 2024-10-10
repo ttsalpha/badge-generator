@@ -1,8 +1,7 @@
-const simpleIcons = require('simple-icons')
-import {variables} from './variables'
-import {calcTextColors} from './color'
-
-const pixelWidth = require('string-pixel-width')
+import * as icons from 'simple-icons'
+import pixelWidth from 'string-pixel-width';
+import { variables } from './variables'
+import { calcTextColors } from './color'
 
 export interface Option {
     label?: string;
@@ -36,7 +35,7 @@ export default function Generator(
         = ['ffffff', '010101', 'ffffff', '010101']
 
     if (label) {
-        _widthLabel += Math.round(pixelWidth(label, {font: 'Verdana', size: 11}))
+        _widthLabel += Math.round(pixelWidth(label, { font: 'verdana', size: 11 }))
         _widthLabelBG += _widthLabel + 10
         _paddingLabel += _widthLabel / 2 + 5
         _paddingStatus += _widthLabelBG
@@ -47,7 +46,7 @@ export default function Generator(
     }
 
     if (status) {
-        _widthStatus += Math.round(pixelWidth(status, {font: 'Verdana', size: 11}))
+        _widthStatus += Math.round(pixelWidth(status, { font: 'verdana', size: 11 }))
         _widthStatusBG += _widthStatus + 10
         _paddingStatus += _widthStatus / 2 + 5
         _widthBadge += _widthStatus + 10
@@ -64,10 +63,11 @@ export default function Generator(
 
         // create svg base64 encode
         try {
-            const path = simpleIcons.Get(String(icon)).path
-
+            const iconKey = `si${icon.charAt(0).toUpperCase() + icon.slice(1).toLowerCase()}`;
+            const iconData = (icons as any)[iconKey];
+            if (!iconData) throw new Error('Icon not found');
             const svgEmbed = `<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#${iconColor}" d="${path}"/>
+                <path fill="#${iconColor}" d="${iconData.path}"/>
             </svg>`
             const svgEncode = Buffer.from(svgEmbed, 'binary').toString('base64')
             icon = `<image x="4" y="3" height="14" width="14" xlink:href="data:image/svg+xml;base64,${svgEncode}"></image>`
@@ -101,5 +101,3 @@ export default function Generator(
         </g>
     </svg>`
 }
-
-module.exports = Generator

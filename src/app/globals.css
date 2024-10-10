@@ -1,0 +1,46 @@
+:root {
+    --red: #FF3B30;
+    --pink: #FF2D55;
+    --orange: #FF9500;
+    --yellow: #FFCC00;
+    --green: #28CD41;
+    --mint: #00C7BE;
+    --teal: #59ADC4;
+    --cyan: #55BEF0;
+    --blue: #007EC6;
+    --purple: #AF52DE;
+    --gray: #8E8E93;
+    --smoke: #DDDDDD;
+    --light: #F9F9F9;
+    --white: #FFFFFF;
+    --dark: #333333;
+    --black: #2A2A2A;
+
+    --background-top: rgba(85, 190, 240, 0.1);
+    --background-bottom: rgba(255, 149, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--dark);
+    background-color: var(--white);
+    background: linear-gradient(to bottom right, var(--background-top) 0%, var(--background-bottom) 100%);
+    background-repeat: no-repeat;
+}
+
+a {
+    color: var(--teal);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--mint);
+}
