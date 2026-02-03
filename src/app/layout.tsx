@@ -1,6 +1,7 @@
 // =================== Libraries =================== //
 import React from "react";
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 
 // =================== Styles =================== //
 import "./globals.css";
@@ -10,7 +11,7 @@ import { Nunito } from "next/font/google"
 
 const font = Nunito({
     subsets: ["latin", "latin-ext", "vietnamese"],
-    weight: ["200", "300", "400", "500", "600", "700"],
+    weight: ["400", "700"],
 })
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ function RootLayout({ children }: React.PropsWithChildren) {
         <html lang="en">
             <body className={font.className}>
                 {children}
+                <Analytics />
             </body>
         </html>
     );
