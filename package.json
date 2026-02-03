@@ -27,24 +27,22 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "eslint ."
     },
     "dependencies": {
-        "@ant-design/icons": "^5.5.1",
-        "@ant-design/nextjs-registry": "^1.0.1",
-        "antd": "^5.21.3",
-        "next": "^14.2.15",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
+        "next": "16.1.6",
+        "react": "19.2.4",
+        "react-dom": "19.2.4",
+        "react-icons": "5.5.0",
         "simple-icons": "latest",
-        "string-pixel-width": "^1.11.0"
+        "string-pixel-width": "1.11.0"
     },
     "devDependencies": {
-        "@types/node": "^22.7.5",
-        "@types/react": "^18.3.11",
-        "@types/string-pixel-width": "^1.10.3",
-        "eslint": "^8",
-        "eslint-config-next": "^14.2.15",
-        "typescript": "^5.6.0"
+        "@types/node": "25.2.0",
+        "@types/react": "19.2.10",
+        "@types/string-pixel-width": "1.11.0",
+        "eslint": "9.39.2",
+        "eslint-config-next": "16.1.6",
+        "typescript": "5.9.3"
     }
 }
