@@ -1,3 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
+# Public site – allow all crawlers
 User-agent: *
-Disallow:
+Allow: /

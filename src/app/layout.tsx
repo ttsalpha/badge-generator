@@ -14,9 +14,31 @@ const font = Nunito({
     weight: ["400", "700"],
 })
 
+const siteUrl = "https://badge.ttsalpha.com";
+
 export const metadata: Metadata = {
     title: "Badge Generator",
     description: "Generate Markdown badges for GitHub README",
+    openGraph: {
+        title: "Badge Generator",
+        description: "Generate Markdown badges for GitHub README",
+        url: siteUrl,
+        siteName: "Badge Generator",
+        type: "website",
+        images: [
+            {
+                url: `${siteUrl}/logo.png`,
+                width: 512,
+                height: 512,
+                alt: "Badge Generator",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Badge Generator",
+        description: "Generate Markdown badges for GitHub README",
+    },
 };
 
 
